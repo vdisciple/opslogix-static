@@ -148,10 +148,18 @@
 
 			<div role="main" class="main">
 
-				<section class="section section-height-3 section-with-shape-divider position-relative border-0 m-0" data-plugin-parallax data-plugin-options="{'speed': 1.5, 'parallaxHeight': '120%'}" data-image-src="img/backgrounds/clouds.jpg">
-					<div class="container pb-5 pb-xl-0 mt-md-3 mb-5">
-						<div class="row">
-							<h4 class="custom-text-background custom-big-font-size-2 text-14 font-weight-semibold float-xl-end clearfix line-height-1 custom-ws-mobile-wrap ws-nowrap pb-2 mb-3 mb-xl-5" style="background-image: url(img/backgrounds/dark-cloud.jpg);">Cloud Services</h4>
+				<section class="section section-with-shape-divider page-header page-header-modern page-header-lg border-0 my-0 lazyload" data-bg-src="img/demos/business-consulting-3/backgrounds/background-5.jpg" style="background-size: cover; background-position: center;">
+					<div class="container pb-5 my-3">
+						<div class="row mb-4">
+							<div class="col-md-12 align-self-center p-static order-2 text-center">
+								<h1 class="font-weight-bold text-color-dark text-10">Cloud Services</h1>
+							</div>
+							<div class="col-md-12 align-self-center order-1">
+								<ul class="breadcrumb d-block text-center">
+									<li><a href="index.html">Home</a></li>
+									<li class="active">Cloud Services</li>
+								</ul>
+							</div>
 						</div>
 					</div>
 					<div class="shape-divider shape-divider-bottom shape-divider-reverse-x" style="height: 123px;">
@@ -161,6 +169,7 @@
 						</svg>
 					</div>
 				</section>
+
 				<div id="examples"class="container py-2">
 					<div class="row">
 							<div class="mt-4 pt-2">
@@ -172,8 +181,8 @@
 													<span class="thumb-info-wrapper border-radius-0">
 														<img src="img/services/Hybrid-Cloud.png" class="img-fluid border-radius-0" alt="">
 														<span class="thumb-info-title">
-															<span class="thumb-info-inner">Infrastructure</span>
-															<span class="thumb-info-type"></span>
+															<span class="thumb-info-inner">Hybrid Cloud</span>
+															<span class="thumb-info-type">Hybrid</span>
 														</span>
 													</span>
 												</span>
@@ -187,8 +196,8 @@
 													<span class="thumb-info-wrapper border-radius-0">
 														<img src="img/services/cloud-01.png" class="img-fluid border-radius-0" alt="">
 														<span class="thumb-info-title">
-															<span class="thumb-info-inner">Incident Response</span>
-															<span class="thumb-info-type"></span>
+															<span class="thumb-info-inner">Infrastructure as a Service</span>
+															<span class="thumb-info-type">IaaS</span>
 														</span>
 													</span>
 												</span>
@@ -202,8 +211,8 @@
 													<span class="thumb-info-wrapper border-radius-0">
 														<img src="img/services/drass-cloud.png" class="img-fluid border-radius-0" alt="">
 														<span class="thumb-info-title">
-															<span class="thumb-info-inner">Backups</span>
-															<span class="thumb-info-type"></span>
+															<span class="thumb-info-inner">Disaster Recovery as a Service</span>
+															<span class="thumb-info-type">DRaaS</span>
 														</span>
 													</span>
 												</span>
@@ -217,8 +226,8 @@
 													<span class="thumb-info-wrapper border-radius-0">
 														<img src="img/services/baas-cloud.png" class="img-fluid border-radius-0" alt="">
 														<span class="thumb-info-title">
-															<span class="thumb-info-inner">Desktops</span>
-															<span class="thumb-info-type"></span>
+															<span class="thumb-info-inner">Backup as a Service</span>
+															<span class="thumb-info-type">BaaS</span>
 														</span>
 													</span>
 												</span>
@@ -229,6 +238,7 @@
 							</div>						
 					</div>
 				</div>
+
 				<div class="container py-2">
 					<div class="row">
 							<div class="mt-4 pt-2">
@@ -378,6 +388,7 @@
 						</div>
 					</div>
 				</section>
+
 			</div>
 
 			<footer id="footer" class="border-top-0 m-0 lazyload">
