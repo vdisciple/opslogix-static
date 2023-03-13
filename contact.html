@@ -177,36 +177,24 @@
 								<div class="bg-light h-100">
 									<div class="d-flex flex-column justify-content-center p-5 h-100 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="500">
 										<div class="pb-5 mb-4 mt-5 mt-lg-0">
-											<div class="d-flex flex-column flex-md-row align-items-center justify-content-center pe-lg-4">
-												<img width="105" height="105" src="img/demos/business-consulting-3/icons/map-pin.svg" alt="Location" data-icon data-plugin-options="{'onlySVG': true, 'extraClass': 'svg-fill-color-primary mb-4 mb-md-0'}" style="width: 105px;" />
-												<div class="text-center text-md-start ps-md-3">
-													<h2 class="font-weight-semibold text-6 mb-1">Porto Business</h2>
-													<p class="text-3-5 mb-0">12345 Porto Blvd,<br>Suite 1500<br>Los Angeles, California 9000</p>
-												</div>
-											</div>
-										</div>
-										<div class="row justify-content-center mb-5 mb-lg-0">
-											<div class="col-auto text-center ms-xl-auto mb-4 mb-xl-0">
-												<h3 class="font-weight-semibold text-color-primary text-3-5 mb-0">SUPPORT</h3>
-												<div class="d-flex">
-													<img width="25" height="25" src="img/demos/business-consulting-3/icons/phone.svg" alt="Phone Icon" data-icon data-plugin-options="{'onlySVG': true, 'extraClass': 'svg-fill-color-primary'}" />
-													<a href="tel:8001234567" class="text-color-dark text-color-hover-primary font-weight-semibold text-decoration-none text-6 ms-2">800-123-4567</a>
-												</div>
-											</div>
-											<div class="col-auto text-center me-xl-auto">
-												<h3 class="font-weight-semibold text-color-primary text-3-5 mb-0">SALES</h3>
-												<div class="d-flex">
-													<img width="25" height="25" src="img/demos/business-consulting-3/icons/phone.svg" alt="Phone Icon" data-icon data-plugin-options="{'onlySVG': true, 'extraClass': 'svg-fill-color-primary'}" />
-													<a href="tel:8001234567" class="text-color-dark text-color-hover-primary font-weight-semibold text-decoration-none text-6 ms-2">800-123-4567</a>
-												</div>
-											</div>
-											<div class="col-auto text-center pt-4 mt-5">
-												<h3 class="font-weight-semibold text-color-primary text-3-5 mb-0">SEND AN EMAIL</h3>
-												<div class="d-flex">
-													<img width="25" height="25" src="img/demos/business-consulting-3/icons/email.svg" alt="Email Icon" data-icon data-plugin-options="{'onlySVG': true, 'extraClass': 'svg-fill-color-primary'}" />
-													<a href="mailto:contact@portotheme.com" class="text-color-dark text-color-hover-primary text-decoration-underline font-weight-semibold text-5-5 wb-all ms-2">contact@portotheme.com</a>
-												</div>
-											</div>
+											<ul class="list list-icons list-icons-style-3 ">
+												<li data-appear-animation="fadeInUpShorter" data-appear-animation-delay="750">
+													<i class="fas fa-check"></i>
+													Want to learn more about our Services.
+												</li>
+												<li data-appear-animation="fadeInUpShorter" data-appear-animation-delay="750">
+													<i class="fas fa-check"></i>
+													Would like a quick quote for cloud services.
+												</li>
+												<li data-appear-animation="fadeInUpShorter" data-appear-animation-delay="750">
+													<i class="fas fa-check"></i>
+													Schedule a consultation for any of our solutions.
+												</li>
+												<li data-appear-animation="fadeInUpShorter" data-appear-animation-delay="750">
+													<i class="fas fa-check"></i>
+													Would like to review your current cloud strategy.
+												</li>
+											</ul>
 										</div>
 									</div>
 								</div>
@@ -255,9 +243,6 @@
 						</div>
 					</div>
 				</section>
-
-				<!-- Google Maps - Go to the bottom of the page to change settings and map location. -->
-				<div id="googlemaps2" class="google-map m-0" style="height: 500px;"></div>
 
 			</div>
 
@@ -379,148 +364,6 @@
 		<!-- Theme Initialization Files -->
 		<script src="js/theme.init.js"></script>
 
-	<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"></script>
-		<script>
-
-			/*
-			Map Settings
-
-				Find the Latitude and Longitude of your address:
-					- https://www.latlong.net/
-					- http://www.findlatitudeandlongitude.com/find-address-from-latitude-and-longitude/
-
-			*/
-
-			function initializeGoogleMaps() {
-				// Map Initial Location
-				var initLatitude = 40.75198;
-				var initLongitude = -73.96978;
-
-				// Map Markers
-				var mapMarkers = [{
-					latitude: initLatitude,
-					longitude: initLongitude,
-					html: "<strong>Porto Business Consulting 3</strong><br>New York, NY 10017<br><br><a href='#' onclick='mapCenterAt({latitude: 40.75198, longitude: -73.96978, zoom: 16}, event)'>[+] zoom here</a>",
-					icon: {
-						image: "img/demos/business-consulting-3/map-pin.png",
-						iconsize: [26, 27],
-						iconanchor: [12, 27]
-					}
-				}];
-
-				// Map Extended Settings
-				var mapSettings = {
-					controls: {
-						draggable: (($.browser.mobile) ? false : true),
-						panControl: false,
-						zoomControl: false,
-						mapTypeControl: false,
-						scaleControl: false,
-						streetViewControl: false,
-						overviewMapControl: false
-					},
-					scrollwheel: false,
-					markers: mapMarkers,
-					latitude: initLatitude,
-					longitude: initLongitude,
-					zoom: 14
-				};
-
-				var map = $('#googlemaps').gMap(mapSettings),
-					mapRef = $('#googlemaps').data('gMap.reference');
-
-				// Styles from https://snazzymaps.com/
-				var styles = [{"featureType":"water","elementType":"geometry","stylers":[{"color":"#e9e9e9"},{"lightness":17}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#f5f5f5"},{"lightness":20}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#ffffff"},{"lightness":17}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#ffffff"},{"lightness":29},{"weight":0.2}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"color":"#ffffff"},{"lightness":18}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#ffffff"},{"lightness":16}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#f5f5f5"},{"lightness":21}]},{"featureType":"poi.park","elementType":"geometry","stylers":[{"color":"#dedede"},{"lightness":21}]},{"elementType":"labels.text.stroke","stylers":[{"visibility":"on"},{"color":"#ffffff"},{"lightness":16}]},{"elementType":"labels.text.fill","stylers":[{"saturation":36},{"color":"#333333"},{"lightness":40}]},{"elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"transit","elementType":"geometry","stylers":[{"color":"#f2f2f2"},{"lightness":19}]},{"featureType":"administrative","elementType":"geometry.fill","stylers":[{"color":"#fefefe"},{"lightness":20}]},{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"color":"#fefefe"},{"lightness":17},{"weight":1.2}]}];
-
-				var styledMap = new google.maps.StyledMapType(styles, {
-					name: 'Styled Map'
-				});
-
-				mapRef.mapTypes.set('map_style', styledMap);
-				mapRef.setMapTypeId('map_style');
-			}
-
-			// Initialize Google Maps when element enter on browser view
-			theme.fn.intObs( '#googlemaps', 'initializeGoogleMaps()', {} );
-
-			// Map text-center At
-			var mapCenterAt = function(options, e) {
-				e.preventDefault();
-				$('#googlemaps').gMap("centerAt", options);
-			}
-
-		</script>
-
-		<script>
-
-			/*
-			Map Settings
-
-				Find the Latitude and Longitude of your address:
-					- https://www.latlong.net/
-					- http://www.findlatitudeandlongitude.com/find-address-from-latitude-and-longitude/
-
-			*/
-
-			function initializeGoogleMaps2() {
-				// Map Initial Location
-				var initLatitude = 40.75198;
-				var initLongitude = -73.96978;
-
-				// Map Markers
-				var mapMarkers = [{
-					latitude: initLatitude,
-					longitude: initLongitude,
-					html: "<strong>Porto Business Consulting 3</strong><br>New York, NY 10017<br><br><a href='#' onclick='mapCenterAt2({latitude: 40.75198, longitude: -73.96978, zoom: 16}, event)'>[+] zoom here</a>",
-					icon: {
-						image: "img/demos/business-consulting-3/map-pin-big.png",
-						iconsize: [28, 37],
-						iconanchor: [12, 37]
-					}
-				}];
-
-				// Map Extended Settings
-				var mapSettings = {
-					controls: {
-						draggable: (($.browser.mobile) ? false : true),
-						panControl: false,
-						zoomControl: false,
-						mapTypeControl: false,
-						scaleControl: false,
-						streetViewControl: false,
-						overviewMapControl: false
-					},
-					scrollwheel: false,
-					markers: mapMarkers,
-					latitude: initLatitude,
-					longitude: initLongitude,
-					zoom: 14
-				};
-
-				var map = $('#googlemaps2').gMap(mapSettings),
-					mapRef = $('#googlemaps2').data('gMap.reference');
-
-				// Styles from https://snazzymaps.com/
-				var styles = [{"featureType":"water","elementType":"geometry","stylers":[{"color":"#e9e9e9"},{"lightness":17}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#f5f5f5"},{"lightness":20}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#ffffff"},{"lightness":17}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#ffffff"},{"lightness":29},{"weight":0.2}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"color":"#ffffff"},{"lightness":18}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#ffffff"},{"lightness":16}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#f5f5f5"},{"lightness":21}]},{"featureType":"poi.park","elementType":"geometry","stylers":[{"color":"#dedede"},{"lightness":21}]},{"elementType":"labels.text.stroke","stylers":[{"visibility":"on"},{"color":"#ffffff"},{"lightness":16}]},{"elementType":"labels.text.fill","stylers":[{"saturation":36},{"color":"#333333"},{"lightness":40}]},{"elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"transit","elementType":"geometry","stylers":[{"color":"#f2f2f2"},{"lightness":19}]},{"featureType":"administrative","elementType":"geometry.fill","stylers":[{"color":"#fefefe"},{"lightness":20}]},{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"color":"#fefefe"},{"lightness":17},{"weight":1.2}]}];
-
-				var styledMap = new google.maps.StyledMapType(styles, {
-					name: 'Styled Map'
-				});
-
-				mapRef.mapTypes.set('map_style', styledMap);
-				mapRef.setMapTypeId('map_style');
-			}
-
-			// Initialize Google Maps when element enter on browser view
-			theme.fn.intObs( '#googlemaps2', 'initializeGoogleMaps2()', {} );
-
-			// Map text-center At
-			var mapCenterAt2 = function(options, e) {
-				e.preventDefault();
-				$('#googlemaps2').gMap("centerAt", options);
-			}
-
-		</script>
 
 	</body>
 </html>
