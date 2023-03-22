@@ -57,7 +57,7 @@ try {
 	// Step 2 (Optional) - If you don't receive the email, try to configure the parameters below:
 
 	$mail->IsSMTP();                                         // Set mailer to use SMTP
-	$mail->Host = 'smtp.gmail.com';				       // Specify main and backup server
+	$mail->Host = 'smtp-relay.gmail.com';				       // Specify main and backup server
 	$mail->SMTPAuth = true;                                  // Enable SMTP authentication
 	$mail->Username = 'cchavez@opslogix.io';                    // SMTP username
 	$mail->Password = '&!C?Jx9%4ghR4bD?';                              // SMTP password
