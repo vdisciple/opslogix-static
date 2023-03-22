@@ -20,14 +20,14 @@ require 'php-mailer/src/SMTP.php';
 require 'php-mailer/src/Exception.php';
 
 // Step 1 - Enter your email address below.
-$email = 'you@domain.com';
+$email = 'info@opslogix.io';
 
 // If the e-mail is not working, change the debug option to 2 | $debug = 2;
 $debug = 0;
 
 // If contact form don't has the subject input change the value of subject here
-$subject = ( isset($_POST['subject']) ) ? $_POST['subject'] : 'Define subject in php/contact-form.php line 29';
-
+//$subject = ( isset($_POST['subject']) ) ? $_POST['subject'] : 'Define subject in php/contact-form.php line 29';
+$subject = 'Website Request'
 $message = '';
 
 foreach($_POST as $label => $value) {
@@ -56,13 +56,13 @@ try {
 
 	// Step 2 (Optional) - If you don't receive the email, try to configure the parameters below:
 
-	//$mail->IsSMTP();                                         // Set mailer to use SMTP
-	//$mail->Host = 'mail.yourserver.com';				       // Specify main and backup server
-	//$mail->SMTPAuth = true;                                  // Enable SMTP authentication
-	//$mail->Username = 'user@example.com';                    // SMTP username
-	//$mail->Password = 'secret';                              // SMTP password
-	//$mail->SMTPSecure = 'tls';                               // Enable encryption, 'ssl' also accepted
-	//$mail->Port = 587;   								       // TCP port to connect to
+	$mail->IsSMTP();                                         // Set mailer to use SMTP
+	$mail->Host = 'smtp.gmail.com';				       // Specify main and backup server
+	$mail->SMTPAuth = true;                                  // Enable SMTP authentication
+	$mail->Username = 'cchavez@opslogix.io';                    // SMTP username
+	$mail->Password = '&!C?Jx9%4ghR4bD?';                              // SMTP password
+	$mail->SMTPSecure = 'tls';                               // Enable encryption, 'ssl' also accepted
+	$mail->Port = 587;   								       // TCP port to connect to
 
 	$mail->AddAddress($email);	 						       // Add another recipient
 
