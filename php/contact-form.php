@@ -32,7 +32,7 @@ $message = '';
 
 foreach($_POST as $label => $value) {
 	$label = ucwords($label);
-	print("WE ARE HERE")
+	print("WE ARE HERE");
 	// Use the commented code below to change label texts. On this example will change "Email" to "Email Address"
 
 	// if( $label == 'Email' ) {               
