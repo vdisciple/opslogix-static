@@ -60,7 +60,7 @@ try {
 	$mail->Host = 'smtp.gmail.com';				       // Specify main and backup server
 	$mail->SMTPAuth = true;                                  // Enable SMTP authentication
 	$mail->Username = 'cchavez@opslogix.io';                    // SMTP username
-	$mail->Password = '&!C?Jx9%4ghR4bD?';                              // SMTP password
+	$mail->Password = 'yxxmzlomjwgyvtgj';                              // SMTP password
 	$mail->SMTPSecure = 'tls';                               // Enable encryption, 'ssl' also accepted
 	$mail->Port = 587;   								       // TCP port to connect to
 
