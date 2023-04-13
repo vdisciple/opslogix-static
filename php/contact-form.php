@@ -55,13 +55,22 @@ try {
 
 	// Step 2 (Optional) - If you don't receive the email, try to configure the parameters below:
 
+	//$mail->IsSMTP();                                         // Set mailer to use SMTP
+	//$mail->Host = 'smtp.gmail.com';				       // Specify main and backup server
+	//$mail->SMTPAuth = true;                                  // Enable SMTP authentication
+	//$mail->Username = 'cchavez@opslogix.io';                    // SMTP username
+	//$mail->Password = 'yxxmzlomjwgyvtgj';                              // SMTP password
+	//$mail->SMTPSecure = 'tls';                               // Enable encryption, 'ssl' also accepted
+	//$mail->Port = 587;   								       // TCP port to connect to
+
 	$mail->IsSMTP();                                         // Set mailer to use SMTP
-	$mail->Host = 'smtp.gmail.com';				       // Specify main and backup server
+	$mail->Host = 'email-smtp.us-east-1.amazonaws.com';				       // Specify main and backup server
 	$mail->SMTPAuth = true;                                  // Enable SMTP authentication
-	$mail->Username = 'cchavez@opslogix.io';                    // SMTP username
-	$mail->Password = 'yxxmzlomjwgyvtgj';                              // SMTP password
+	$mail->Username = 'AKIA5X3UUKJ3M3QLPXMM';                    // SMTP username
+	$mail->Password = 'BLP89z79k/9LTFCw8oJ6UverOTX7xJwTU75vbTy39n0L';                              // SMTP password
 	$mail->SMTPSecure = 'tls';                               // Enable encryption, 'ssl' also accepted
 	$mail->Port = 587;   								       // TCP port to connect to
+
 
 	$mail->AddAddress($email);	 						       // Add another recipient
 
